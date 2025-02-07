@@ -38,9 +38,14 @@ The Food Recipe App is a web application that allows users to search for and vie
 
 <details>
   <summary>Click to see App building demo notes</summary>
+
 ## Demo notes: HowTo Setup from scratch
 
 ```bash
+# "Hello everyone! Today, we'll be building a full-stack web application live. We'll use Node.js for the backend, React for the frontend, and GitHub Copilot as our coding assistant to help streamline the development process. In the first half, I'll take on the role of the customer and Beijie will build out the application prototype, while I give requirements and feedback. In the second half, we'll switch roles — I will enhance the prototype by adding additional feature, but more on that later. OK, let's get started"
+
+# "Everyday, I seem to have trouble deciding what to eat for lunch. I want an app that can recommend me some restaurants based on my location and cuisine preference. Can you build that for me?"
+
 # Make project directory
 mkdir client server
 ```
@@ -70,7 +75,6 @@ Y
 
 ```bash
 # Demo the app
-# if times allows, update css using copilot
 # Ask for questions, feedback, and suggestions
 # "push to git", pass to James
 ```
