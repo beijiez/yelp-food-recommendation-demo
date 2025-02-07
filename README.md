@@ -88,35 +88,47 @@ Y
 cd server
 # select 'validator.js'
 # prompt: "Create a validator class that satisfies the requirements: cuisine, location, and limit are required. limit must be an integer. Then, show me how to integrate it into my server code."
-
-# "Also, can we check the user entered an integer for the limit field?"
 ```
 ```bash
 cd client
 # select 'App.js'
 # prompt: "Modify this code to surface the error message from the server side validator at the bottom of the page and in red text."
+# demonstrate changes in app
+cd server 
+npm i
+node index.js
+cd ../client
+npm i
+npm start
 ```
 ```bash
 cd server
 # select 'tests/validator.test.js'
 # prompt: "Generate some unit tests for the Validator class."
-```
-```bash
-# select 'validator.js'
-# prompt: "What can be improved here?"
-# select 'tests/validator.test.js'
-# prompt: "Adjust these tests based on the latest version of the Validator class."
+npm i jest --save-dev
+add npm test script to package.json
+"scripts": {
+    "test": "jest"
+}
+npm test
 ```
 ```bash
 # select 'validator.js'
 # break it (remove an 'if' block) & re-run tests
 # prompt: "My tests are failing. How should I fix my code?"
+npm test
+# Now our tests are all passing again
 ```
 ```bash
-
 # "Great! Can we talk about how we would deploy this app to the cloud? Perhaps with a Terraform template? Can you help me with that?"
 # Go to Copilot Edits, select files
 # prompt: "Generate terraform that uses the Azure provider to deploy this project as a webapp, and show me what commands i would run to execute the terraform, bundle my app, and deploy to those Azure resources"
+```
+```bash
+Bejie: "Now let's add a README so others know how it works."
+# create README
+# try autocomplete with copilot (fails)
+# try generating README with project file context (success)
 ```
 
 </details>
