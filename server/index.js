@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(cors());
 
-const YELP_API_KEY = 'g7TstR-cYAbBTmi4rClbbjnzBOvdsYiS_c65eUCTEaCFo6dvwI0iz9CA9TT9tq0RORnaG3vAQkBaIazSvXg2HpocaPuV-DkkMf0ZvdjnhePlR4UOxmJ0VP70FZajZ3Yx';
+const YELP_API_KEY = 'YOUR_YELP_API_KEY';
 const YELP_API_URL = 'https://api.yelp.com/v3/businesses/search';
 
 app.get('/restaurants', async (req, res) => {
