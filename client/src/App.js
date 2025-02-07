@@ -7,13 +7,24 @@ function App() {
   const [cuisine, setCuisine] = useState('');
   const [limit, setLimit] = useState('');
   const [restaurants, setRestaurants] = useState([]);
+  const [errors, setErrors] = useState([]);
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:3000/restaurants?location=${location}&cuisine=${cuisine}&limit=${limit}`);
-    const data = await response.json();
-    setRestaurants(data);
+    setErrors([]); // Clear previous errors
+
+    try {
+      const response = await fetch(`http://localhost:3000/restaurants?location=${location}&cuisine=${cuisine}&limit=${limit}`);
+      const data = await response.json();
+
+      if (response.ok) {
+        setRestaurants(data);
+      } else {
+        setErrors(data.errors);
+      }
+    } catch (error) {
+      setErrors([error.message]);
+    }
   };
 
   return (
@@ -35,6 +46,13 @@ function App() {
           </div>
           <button type="submit">Search</button>
         </form>
+        {errors.length > 0 && (
+          <div className="errors">
+            {errors.map((error, index) => (
+              <p key={index} style={{ color: 'red' }}>{error}</p>
+            ))}
+          </div>
+        )}
         <div>
           {restaurants.map((restaurant) => (
             <div key={restaurant.url}>

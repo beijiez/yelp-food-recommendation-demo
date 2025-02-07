@@ -75,4 +75,42 @@ Y
 # "push to git", pass to James
 ```
 
+```bash
+# Bejie explain requirements to James
+# "I want validation added to the app such that if the user tries to submit while leaving cuisine, location, or limit empty, an error shows that they're missing it."
+# "Also, check that the user entered an integer for the limit field."
+```
+```bash
+cd server
+# select 'validator.js'
+# prompt:
+# "Create a validator class that satisfies the requirements: cuisine, location, and limit are required. limit must be an integer. Then, show me how to integrate it into my server code."
+```
+```bash
+cd client
+# select 'App.js'
+# prompt:
+# "Modify this code to surface the error message from the server side validator at the bottom of the page and in red text."
+```
+```bash
+cd server
+# select 'tests/validator.test.js'
+# prompt: "Generate some unit tests for the Validator class."
+```
+```bash
+# select 'validator.js'
+# prompt: "What can be improved here?"
+# select 'tests/validator.test.js'
+# prompt: "Adjust these tests based on the latest version of the Validator class."
+```
+```bash
+# select 'validator.js'
+# break it (remove an 'if' block) & re-run tests
+# prompt: "My tests are failing. How should I fix my code?"
+```
+```bash
+# Go to Copilot Edits, select files
+# prompt: "Generate terraform that uses the Azure provider to deploy this project as a webapp, and show me what commands i would run to execute the terraform, bundle my app, and deploy to those Azure resources"
+```
+
 </details>
