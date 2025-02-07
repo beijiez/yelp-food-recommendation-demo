@@ -38,9 +38,14 @@ The Food Recipe App is a web application that allows users to search for and vie
 
 <details>
   <summary>Click to see App building demo notes</summary>
+
 ## Demo notes: HowTo Setup from scratch
 
 ```bash
+# "Hello everyone! Today, we'll be building a full-stack web application live. We'll use Node.js for the backend, React for the frontend, and GitHub Copilot as our coding assistant to help streamline the development process. In the first half, I'll take on the role of the customer and Beijie will build out the application prototype, while I give requirements and feedback. In the second half, we'll switch roles — I will enhance the prototype by adding additional feature, but more on that later. OK, let's get started"
+
+# "Everyday, I seem to have trouble deciding what to eat for lunch. I want an app that can recommend me some restaurants based on my location and cuisine preference. Can you build that for me?"
+
 # Make project directory
 mkdir client server
 ```
@@ -70,27 +75,26 @@ Y
 
 ```bash
 # Demo the app
-# if times allows, update css using copilot
 # Ask for questions, feedback, and suggestions
 # "push to git", pass to James
 ```
 
 ```bash
 # Bejie explain requirements to James
+# "Now we will swap roles, I will be the customer, while James will add more features to the app"
 # "I want validation added to the app such that if the user tries to submit while leaving cuisine, location, or limit empty, an error shows that they're missing it."
-# "Also, check that the user entered an integer for the limit field."
 ```
 ```bash
 cd server
 # select 'validator.js'
-# prompt:
-# "Create a validator class that satisfies the requirements: cuisine, location, and limit are required. limit must be an integer. Then, show me how to integrate it into my server code."
+# prompt: "Create a validator class that satisfies the requirements: cuisine, location, and limit are required. limit must be an integer. Then, show me how to integrate it into my server code."
+
+# "Also, can we check the user entered an integer for the limit field?"
 ```
 ```bash
 cd client
 # select 'App.js'
-# prompt:
-# "Modify this code to surface the error message from the server side validator at the bottom of the page and in red text."
+# prompt: "Modify this code to surface the error message from the server side validator at the bottom of the page and in red text."
 ```
 ```bash
 cd server
@@ -109,6 +113,8 @@ cd server
 # prompt: "My tests are failing. How should I fix my code?"
 ```
 ```bash
+
+# "Great! Can we talk about how we would deploy this app to the cloud? Perhaps with a Terraform template? Can you help me with that?"
 # Go to Copilot Edits, select files
 # prompt: "Generate terraform that uses the Azure provider to deploy this project as a webapp, and show me what commands i would run to execute the terraform, bundle my app, and deploy to those Azure resources"
 ```
