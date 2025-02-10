@@ -42,10 +42,10 @@ The Food Recipe App is a web application that allows users to search for and vie
 ## Demo notes: HowTo Setup from scratch
 
 ```bash
-# "Hello everyone! Today, we'll be building a full-stack web application live. We'll use Node.js for the backend, React for the frontend, and GitHub Copilot as our coding assistant to help streamline the development process. In the first half, I'll take on the role of the customer and Beijie will build out the application prototype, while I give requirements and feedback. In the second half, we'll switch roles — I will enhance the prototype by adding additional feature, but more on that later. OK, let's get started"
+# James: "Hello everyone! Today, we'll be building a full-stack web application live. We'll use Node.js for the backend, React for the frontend, and GitHub Copilot as our coding assistant to help streamline the development process. In the first half, I'll take on the role of the customer and Beijie will build out the application prototype, while I give requirements and feedback. In the second half, we'll switch roles — I will enhance the prototype by adding additional feature, but more on that later. OK, let's get started"
 
-# "Everyday, I seem to have trouble deciding what to eat for lunch. I want an app that can recommend me some restaurants based on my location and cuisine preference. Can you build that for me?"
-
+# James: "Everyday, I seem to have trouble deciding what to eat for lunch. I want an app that can recommend me some restaurants based on my location and cuisine preference. Can you build that for me?"
+# Beijie: "yes of course. I am hungry as well. let's do it"
 # Make project directory
 mkdir client server
 ```
@@ -75,14 +75,13 @@ Y
 
 ```bash
 # Demo the app
-# Ask for questions, feedback, and suggestions
+# Beijie: "I think that is our prototype for this restaurant web service. How does this look James? And questions comments before I pass it over to James?"
 # "push to git", pass to James
 ```
 
 ```bash
-# Bejie explain requirements to James
-# "Now we will swap roles, I will be the customer, while James will add more features to the app"
-# "I want validation added to the app such that if the user tries to submit while leaving cuisine, location, or limit empty, an error shows that they're missing it."
+# Beijie: "Now we will swap roles, I will be the customer, while James will add more features to the app"
+# Beijie: "I want validation added to the app such that if the user tries to submit while leaving cuisine, location, or limit empty, an error shows that they're missing it."
 ```
 ```bash
 cd server
@@ -120,12 +119,12 @@ npm test
 # Now our tests are all passing again
 ```
 ```bash
-# "Great! Can we talk about how we would deploy this app to the cloud? Perhaps with a Terraform template? Can you help me with that?"
+# Beijie: "Great! Can we talk about how we would deploy this app to the cloud? Perhaps with a Terraform template? Can you help me with that?"
 # Go to Copilot Edits, select files
 # prompt: "Generate terraform that uses the Azure provider to deploy this project as a webapp, and show me what commands i would run to execute the terraform, bundle my app, and deploy to those Azure resources"
 ```
 ```bash
-Bejie: "Now let's add a README so others know how it works."
+Bejie: "Can we add a README so others know how this works?"
 # create README
 # try autocomplete with copilot (fails)
 # try generating README with project file context (success)
